@@ -1,5 +1,5 @@
 variable "location" {
-    default = "ap-south-1"
+    default = "us-east-1"
 }
 
 variable "os_name" {
@@ -23,5 +23,5 @@ variable "subnet1-cidr" {
   
 }
 variable "subent_az" {
-    default =  "ap-south-1a"  
+    default =  "us-east-1a"  
 }
