@@ -146,7 +146,7 @@ resource "aws_eks_node_group" "backend" {
   disk_size = "20"
   instance_types = ["t2.small"]
   remote_access {
-    ec2_ssh_key = "rtp-03"
+    ec2_ssh_key = "nvirginia-devops"
     source_security_group_ids = [var.sg_ids]
   } 
   
@@ -158,9 +158,10 @@ resource "aws_eks_node_group" "backend" {
     min_size     = 1
   }
 
-  update_config {
+/*  update_config {
     max_unavailable = 1
-  }
+    max_unavailable_percentage = 0
+  } */
 
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
